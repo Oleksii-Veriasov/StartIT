@@ -1,0 +1,19 @@
+body{
+	background-color: #ddd;
+}
+
+ul {
+   list-style-image: url("In-yang.png");
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.markers li {
+	list-style: none;
+}
