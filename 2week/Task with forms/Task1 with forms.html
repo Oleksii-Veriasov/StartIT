@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title> Task_1 with Forms </title>
+		<style>
+
+			body {
+				width: 60%;
+				margin: auto;
+			}
+
+			form {
+				width: 550px;
+			}
+
+			em {
+				color: red;
+			}
+
+			label {
+				text-align:left;
+			}
+
+			.submit {
+				padding-top: 10px;
+				padding-bottom: 30px;
+			}
+			
+			
+			.field {
+				clear:both;
+				text-align:right;
+				position: relative;
+				padding: 10px;
+				line-height:25px;
+			}
+			
+			.main1 div label {
+				padding-right:40px;
+			} 
+			
+			.main1 label, .main2 label {
+				float:left;
+				padding-right:10px;
+			}
+
+			textarea {
+				height: 90px;
+			}
+
+			
+			input[type="text"], input[type="number"], input[type="tel"], select, textarea {
+				width:250px;
+			}
+
+			input:focus{
+    			border: 1px solid #d76269;
+			}
+
+			.main1, .main2 {float:left}
+
+			.checkbox {
+				position: relative;
+				float: left;
+				padding: 5px;
+				width: 100px;
+			}
+
+		</style>
+			
+	</head>
+	<body>
+		<h1>Форма заявки на работу в зоопарке</h1>
+		<p><i>Пожалуйста, заполните форму. Обязательные поля помечены<span>*</span></i></p>
+		<form>
+			<fieldset>	
+				<legend>Контактная информация</legend>
+				<div class="main1">
+					<div class="field">
+						<label for="name">Имя<em>*</em></label>
+						<input type="text" name="name" required>
+					</div>
+
+					<div class="field">
+						<label for="tel">Телефон</label>
+						<input type="tel" name="tel">
+					</div>
+
+					<div class="field">
+						<label for="email">Email<em>*</em></label>
+						<input type="tel" name="email" required>
+					</div>
+				</div>	
+			</fieldset>
+			<fieldset>
+				<legend>Персональная информация</legend>
+					<div class="main2">
+						<div class="field">
+							<label for="age">Возраст<em>*</em></label>
+							<input type="number" name="age" min="1" max="120" required>
+						</div>
+
+						<div class="field">
+							<label for="gender">Пол</label>
+							<select readonly name="gender">
+							  <option>Женщина</option>
+							  <option>Мужчина</option>
+							</select>
+						</div>
+						<div class="field">
+							<label for="self">Перечислите<br>личные<br>качества</label>
+							<textarea name="self"></textarea>
+					</div>
+				</div>	
+			</fieldset>
+			<fieldset>
+				<legend>Выберете ваших любимых животных</legend>
+					<div class="checkbox">
+						<input type="checkbox" name="zebra">
+						<label for="zebra">Зебра</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="koshak">
+						<label for="koshak">Кошак</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="anakonda">
+						<label for="anakonda">Анаконда</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="chelovek">
+						<label for="chelovek">Человек</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="slon">
+						<label for="slon">Слон</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="antilopa">
+						<label for="antilopa">Антилопа</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="golub">
+						<label for="golub">Голубь</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="krab">
+						<label for="krab">Краб</label>
+					</div>
+			</fieldset>
+			<div class="submit">
+				<input type="submit" value="Отправить информацию">
+		    </div>
+		</form>
+	</body>
+</html>	

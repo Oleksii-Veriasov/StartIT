@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title> Task_1 with Forms </title>
+		<style>
+
+			body {
+				width: 60%;
+				margin: auto;
+			}
+
+			form {
+				width: 550px;
+			}
+
+			label {
+				text-align:left;
+			}
+
+			.submit {
+				padding-top: 10px;
+				padding-bottom: 30px;
+			}
+						
+			.field {
+				clear:both;
+				text-align:right;
+				position: relative;
+				padding: 10px;
+				line-height:25px;
+			}
+
+			.field input {
+				margin-right: 170px;
+			}
+			
+			.main div label {
+				padding-right:10px;
+			} 
+			
+			.main label {
+				float:left;
+				padding-right:10px;
+			}
+
+			textarea {
+				height: 90px;
+				width: 100%;
+			}
+
+			
+			input[type="text"], input[type="number"], input[type="tel"] {
+				width:250px;
+			}
+
+			input:focus{
+    			border: 1px solid #d76269;
+			}
+
+			.checkbox {
+				padding: 5px;
+				width: 200px;
+			}
+
+		</style>
+			
+	</head>
+	<body>
+		<h1>Форма заказа "Сандали"</h1>
+		<p><i>Хотите приобрести такие сандали, которых ни у кого нет? Закажите обувь у нас<br>
+		- и вам будут завидовать все окружающие!</i></p>
+		<form enctype="multipart/form-data" method="post" action="http://rightman.p.ht/lwd/contest.php">
+			<fieldset>	
+				<legend>Информация о заказчике</legend>
+				<div class="main">
+					<div class="field">
+						<label for="name">Имя</label>
+						<input type="text" name="name" required>
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="tel" name="email" required>
+					</div>
+					<div class="field">
+						<label for="phone">Телефон</label>
+						<input type="tel" name="phone">
+					</div>
+					<div class="field">
+						<label for="story">Я хочу такие сандали, потому что...</label>
+						<textarea name="story" placeholder="Не более 300 символов..."></textarea>
+					</div>			
+				</div>	
+			</fieldset>
+			<h2>Выберите дизайн сандалей:</h2>
+			<fieldset>
+				<legend>Характеристики</legend>
+					<fieldset>
+						<legend>Цвет<i>(выберите один пункт):</i></legend>
+							<p>
+								<input type="radio" name="color" value="red">
+								<label for="color">Красный</label>
+							</p>
+							<p>
+								<input type="radio" name="color" value="blue">
+								<label for="color">Синий</label>
+							</p>
+							<p>
+								<input type="radio" name="color" value="black">
+								<label for="color">Черный</label>
+							</p>
+							<p>	
+								<input type="radio" name="color" value="silver">
+								<label for="color">Серебрянный</label>
+							</p>
+					</fieldset>
+
+					<fieldset>
+						<legend>Дополнительно<i>(выберите один или несколько пунктов):</i></legend>
+							<div class="checkbox">
+								<input type="checkbox" name="features[glossyBezels]">
+								<label for="features[glossyBezels]">Глянцевые ободки</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="features[metalPlaque]" checked>
+								<label for="features[metalPlaque]">Металлическая бляшка</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="features[lightingSole]">
+								<label for="features[lightingSole]">Светящаяся подршва</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="features[MP3Player]">
+								<label for="features[MP3Player]">MP3 проигрыватель</label>
+							</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Размер</legend>
+						<label for="size">Стандартные российские размеры</label>
+						<select name=”size”>
+							<option>33</option>
+							<option>34</option>
+							<option>35</option>
+							<option>36</option>
+							<option>37</option>
+							<option>38</option>
+							<option>39</option>
+							<option>40</option>
+							<option>41</option>
+							<option>42</option>
+							<option>43</option>
+						</select>
+					</fieldset>
+			</fieldset>
+			<div class="submit">
+				<input type="submit" value="Заказать!">
+				<input type="reset" value="Сброс">
+		    </div>
+		</form>
+	</body>
+</html>	
