@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task_4</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var cuntries = ["USA", "China", "India", "Russia", "Ukrain"];
+		var population = [325350377, 1384350000 , 1318700000, 147000000, 45000000];
+
+		document.write("Население " + cuntries[0] + " составляет " + population[0] + " человек" + "<br>");
+		document.write("Население " + cuntries[1] + " составляет " + population[1] + " человек" + "<br>");
+		document.write("Население " + cuntries[2] + " составляет " + population[2] + " человек" + "<br>");
+		document.write("Население " + cuntries[3] + " составляет " + population[3] + " человек" + "<br>");
+		document.write("Население " + cuntries[4] + " составляет " + population[4] + " человек" + "<br>");
+
+	</script>
+	<hr>
+	<!-- Теперь через цикл-->
+
+	<script type="text/javascript">
+		for (var i = 0 ; i <= cuntries.length - 1; i++) {
+			for (var i = 0; i <= population.length - 1; i++) {
+				document.write("Население " + cuntries[i] + " составляет " + population[i] + " человек" + "<br>");
+			}
+		}
+
+	</script>
+</body>
+</html>
